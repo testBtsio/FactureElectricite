@@ -72,14 +72,14 @@ namespace FactureElectricite
                 if (conso < 250)
                 {
                 Console.WriteLine("tranche 1 " + 100 + " kwhs");
-                Console.WriteLine("tranche 2 " + conso - 100 + " kwhs");
+                Console.WriteLine("tranche 2 " + (conso - 100) + " kwhs");
                 }
-            else
-            {
+                else
+                {
                 Console.WriteLine("tranche 1 " + 100 + " kwhs");
                 Console.WriteLine("tranche 2 " + 150 + " kwhs");
-                Console.WriteLine("tranche 3 " + conso-250 + " kwhs");
-            }
+                  Console.WriteLine("tranche 3 " + (conso-250) + " kwhs");
+                 }
 
                 Console.WriteLine(" le montant de votre facture s'élève à " + total);
 
