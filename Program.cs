@@ -66,9 +66,22 @@ namespace FactureElectricite
             edition_client(nome, prenome, adresse, ville, cp);
             // edition de la facture 
             Console.WriteLine("consommation " + conso + " kwhs");
-            Console.WriteLine("tranche 1 " + conso);
-           
-            Console.WriteLine(" le montant de votre facture s'élève à " + total);
+            if (conso < 100)
+                Console.WriteLine("tranche 1 " + conso + " kwhs");
+            else
+                if (conso < 250)
+                {
+                Console.WriteLine("tranche 1 " + 100 + " kwhs");
+                Console.WriteLine("tranche 2 " + conso - 100 + " kwhs");
+                }
+            else
+            {
+                Console.WriteLine("tranche 1 " + 100 + " kwhs");
+                Console.WriteLine("tranche 2 " + 150 + " kwhs");
+                Console.WriteLine("tranche 3 " + conso-250 + " kwhs");
+            }
+
+                Console.WriteLine(" le montant de votre facture s'élève à " + total);
 
             Console.ReadLine();
         }
